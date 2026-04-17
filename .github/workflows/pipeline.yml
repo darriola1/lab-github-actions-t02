@@ -16,7 +16,7 @@ jobs:
     name: Build Docker Image
     runs-on: ubuntu-latest
     outputs:
-      image-tag: ${{ env.IMAGE_TAG }}
+      image-tag: ${{ steps.tag.outputs.value }}
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
